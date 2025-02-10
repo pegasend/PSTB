@@ -21,6 +21,7 @@ if __name__ == "__main__":
     # user's word : "ttiiitllleeee" ➞ "title"
     # user's word : "cccccaaarrrbbonnnnn" ➞ "carbon"
     s=input("donner une chaine svp? ")
-    print("Challenge#2: chaine sans doublons =>", ''.join(dict.fromkeys("wiiiinnnnd") ) )#dict.fromkeys(keys, value),key classée
+    print("Challenge#2: chaine sans doublons =>", ''.join(dict.fromkeys(s) ) )#dict.fromkeys(keys, value),key classée
+    print()
 
 #EOF
