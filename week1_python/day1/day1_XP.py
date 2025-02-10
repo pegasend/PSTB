@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# execution : $python day1_XP.py
 
 # Exo1
 for i in range(4):
@@ -44,7 +45,7 @@ print("Exo5:", our_fav_numbers)
 
 # Exo7
 basket = ["Banana", "Apples", "Oranges", "Blueberries"]
-#Supprimer Bananade la liste.
+#Supprimer Bananade de la liste.
 basket.remove("Banana")
 print("Exo7:", basket)
 
