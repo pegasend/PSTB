@@ -40,6 +40,7 @@ if __name__ == "__main__":
 
     print("\ncoût total des films pour la famille:",tot,"$")
 
+    #Exo3
     print("\nExo3")
     brand={'name': 'Zara',
            'creation_date': 1975,
@@ -91,6 +92,7 @@ if __name__ == "__main__":
     # 13. Imprimez la valeur de la clé number_stores. Que vient-il de se passer ?
     print("number_stores=", brand['number_stores']," MAJ suite à l'update()")
 
+    # Exo4
     print("\nExo4")
     def describe_city(city, country="Iceland"):
         # # La fonction doit imprimer une phrase simple, telle que « city est dans country».
@@ -102,7 +104,24 @@ if __name__ == "__main__":
     describe_city("Paris", "Ile de France")
 
     print("\nExo5")
+    # Créez une fonction qui accepte un nombre entre 1 et 100
+    # et génère un autre nombre aléatoirement entre 1 et 100. Utilisez le random module.
+    import random
+    def nb_aleatoire(n1):
+        n2=random.randint(1, 100)
+        if n1==n2:
+            print(f"({n1})==({n2}), bravo")
+        else:
+            print("les 2 nombres ne sont pas egaux:", n1," et",n2)
+        return
 
+    n=int(input("donner un numbre entre 1 et 100? "))
+    if 1<=n<=100:
+        nb_aleatoire(n)
+    else:
+        print("recommencer avec nombre correct")
+    # Comparez les deux nombres, si c'est le même nombre, affichez un success message,
+    # sinon affichez un fail message et display both numbers.
 
     print("\nExo6")
     # Écrivez une fonction appelée make_shirt()
