@@ -4,9 +4,9 @@
 if __name__ == "__main__":
     # Challenge#1
     print("challenge#1: ")
+    # Demandez un mot à un utilisateur.
+    w=input("fournir un mot? ")
 
-    # Challenge#2
-    print("\nChallenge#2: ")
 
     print()
 
