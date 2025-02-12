@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+
 # $mkdir tools_pets, put the file XP_day3.py into ./tools_pets
 # execution : $python XP2_day3.py
 
