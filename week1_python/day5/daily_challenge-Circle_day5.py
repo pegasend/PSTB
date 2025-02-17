@@ -46,6 +46,34 @@ class Circle:
     def __lt__(self, other):                        # comparaison par '<' entre 2 cercles
         return self.rayon < other.rayon             # Comparaison de rayons
 
+def dessine_cercle(l_cercles, dico_couleurs):
+    #couleurs={cercle3.rayon:'red', cercle2.rayon:'cyan', cercle1.rayon:'blue'} # une couleur différente selon la taille ou rayon de cercle à dessiner
+    for c in sorted(l_cercles, reverse=True): # trie decroissant
+        # Set up the turtle screen and set the background color to white
+        screen = turtle.Screen()
+        screen.bgcolor("white")
+
+        # Create a new turtle and set its speed to the fastest possible
+        pen = turtle.Turtle()
+        pen.speed(0)
+
+        print(c.rayon)
+        # Set the fill color to red
+        pen.fillcolor(dico_couleurs[c.rayon])
+        pen.begin_fill()
+
+        # Draw the circle with a radius of 100 pixels
+        pen.circle(c.rayon*10)# 5=>50, 10=>100, 20=>200
+
+        # End the fill
+        pen.end_fill()
+    #and stop drawing
+    pen.hideturtle()
+
+    # Keep the turtle window open until it is manually closed
+    turtle.done()
+    return
+
 if __name__ == "__main__":
     # daily_challenge N°1
     print("challenge")
@@ -108,30 +136,9 @@ if __name__ == "__main__":
     # Bonus (non obligatoire) : Installez le module Turtle => pip install Turtle
     # et dessinez les cercles triés
     print("dessinez les cercles tries")
-    couleurs={cercle3.rayon:'red', cercle2.rayon:'cyan', cercle1.rayon:'blue'} # une couleur différente selon la taille ou rayon de cercle à dessiner
-    for c in sorted([cercle3, cercle1, cercle2], reverse=True): # trie decroissant
-        # Set up the turtle screen and set the background color to white
-        screen = turtle.Screen()
-        screen.bgcolor("white")
+    dico_couleurs={cercle3.rayon:'red', cercle2.rayon:'cyan', cercle1.rayon:'blue'}# une couleur différente selon la taille ou rayon de cercle à dessiner
+    liste_cercles=[cercle3, cercle1, cercle2] # cercle3>cercle2>cercle1
+    dessine_cercle(liste_cercles, dico_couleurs)# dessinez les cercles tries en descroissant
 
-        # Create a new turtle and set its speed to the fastest possible
-        pen = turtle.Turtle()
-        pen.speed(0)
-
-        print(c.rayon)
-        # Set the fill color to red
-        pen.fillcolor(couleurs[c.rayon])
-        pen.begin_fill()
-
-        # Draw the circle with a radius of 100 pixels
-        pen.circle(c.rayon*10)# 5=>50, 10=>100, 20=>200
-
-        # End the fill
-        pen.end_fill()
-    #and stop drawing
-    pen.hideturtle()
-
-    # Keep the turtle window open until it is manually closed
-    turtle.done()
-
+    print()
 #EOF
