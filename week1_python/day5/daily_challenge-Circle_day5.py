@@ -46,7 +46,7 @@ class Circle:
     def __lt__(self, other):                        # comparaison par '<' entre 2 cercles
         return self.rayon < other.rayon             # Comparaison de rayons
 
-def dessine_cercle(l_cercles, dico_couleurs):
+def dessine_cercles(l_cercles, dico_couleurs):
     #couleurs={cercle3.rayon:'red', cercle2.rayon:'cyan', cercle1.rayon:'blue'} # une couleur différente selon la taille ou rayon de cercle à dessiner
     for c in sorted(l_cercles, reverse=True): # trie decroissant
         # Set up the turtle screen and set the background color to white
@@ -138,7 +138,7 @@ if __name__ == "__main__":
     print("dessinez les cercles tries")
     dico_couleurs={cercle3.rayon:'red', cercle2.rayon:'cyan', cercle1.rayon:'blue'}# une couleur différente selon la taille ou rayon de cercle à dessiner
     liste_cercles=[cercle3, cercle1, cercle2] # cercle3>cercle2>cercle1
-    dessine_cercle(liste_cercles, dico_couleurs)# dessinez les cercles tries en descroissant
+    dessine_cercles(liste_cercles, dico_couleurs)# dessinez les cercles tries en descroissant
 
     print()
 #EOF
